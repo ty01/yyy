@@ -1,0 +1,153 @@
+@charset "utf-8";
+/* 通用样式初始化 */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {margin:0;padding:0;border:none;list-style:none;outline:none;}
+body { font-size: 14px; font-family: "微软雅黑";  padding: 0; margin: 0; color: #535353; }
+div, form, ul, dd, dl, ol, dt, li, p { list-style: none; padding: 0; margin: 0; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; margin: 0; padding: 0; font-weight: normal; }
+table { border-collapse: separate; border-spacing: 0; }
+table, td, th { vertical-align: middle; }
+textarea, input, button, select, keygen, legend { outline: 0; margin: 0; padding: 0;}
+textarea { resize:none; } 
+img{border:none;vertical-align:middle;}
+input[type="button"],input[type="submit"],input[type="reset"]{-webkit-appearance:none;outline:none;}
+a { text-decoration: none;  cursor: pointer; }
+a:hover { text-decoration: none; }
+*{box-sizing: border-box;}
+
+input{background: none;padding-left: 42px;}
+
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-button:vertical{display:none}
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar-track{background-color:#e2e2e2}
+::-webkit-scrollbar-thumb{border-radius:0;background-color:rgba(0,0,0,.3);}
+::-webkit-scrollbar-thumb:vertical:hover{background-color:rgba(0,0,0,.35)}
+::-webkit-scrollbar-thumb:vertical:active{background-color:rgba(0,0,0,.38)}
+
+.box{
+	/*width: 1200px;*/
+	/*height:800px;*/
+	margin: 0 auto;
+	background-image: url(../images/bg.png);
+	position: relative;
+	background-size: 100% 100%;
+}
+.border_box{
+	width: 620px;
+	height: 420px;
+	background: rgba(255,255,255,0.2);
+	border-radius: 15px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.regist_box{
+	width: 600px;
+	height: 400px;
+	background: #fff;
+	border-radius: 15px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	padding: 25px;
+}
+.regist_box .title{
+	font-size: 26px;
+}
+.form_box{
+	margin-top: 30px;
+}
+.item{
+	position: relative;
+    margin-bottom: 15px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(189, 189, 189);
+    border-image: initial;
+    border-radius: 5px;
+}
+.item input{
+	width: 90%;
+    height: 42px;
+}
+.item img{
+	position: absolute;
+    top: 15px;
+    left: 20px;
+}
+.item a{
+	position: absolute;
+    /*top: 15px;*/
+    right: 20px;
+    line-height: 42px;
+    color: #4395ff;
+}
+.go{
+	display: block;
+    width: 550px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 18px;
+    background-color: #4395ff;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 0px auto;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+
+header{
+	width: 1200px;
+	margin:0 auto;
+	height: 150px;
+	position: relative;
+	background: #fff;
+	line-height: 150px;
+	vertical-align: middle;
+	font-size: 20px;
+	color:#444;
+
+}
+header img{
+	margin-right: 5px;
+}
+header .company{
+	position: absolute;
+	top: 0;
+	left:0;
+}
+header .adress{
+	width: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+header .user{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+header .user img{
+	width: 70px;
+	height: 70px;
+}
+header #username{
+	display: inline-block;
+	width: 170px;
+}
+
+.iframe_content{
+	background: #f5f5f5;
+}
+.iframe_content iframe{
+	width: 100%;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+        首页
+    </title>
+    <link rel="stylesheet" href="_libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="_libs/dist/css/sdm.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+    <script src="_libs/plugins/html5shiv.min.js"></script>
+    <script src="_libs/plugins/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+
+<body>
+    <header>
+        <div class="company">
+            <img src="images/company.png" alt="">
+            <span>江苏泛森科技有限公司</span>
+        </div>
+        <div class="adress">
+            <img src="images/address.png" alt="">
+            <span>江苏省南京市玄武区玄武大道669号-225号</span>
+        </div>
+        <div class="user">
+            <img src="images/enter_1.png" alt="">
+            <span id="username">张三</span>
+            <a>退出</a>       
+        </div>
+    </header>
+    <div class="iframe_content">
+        <iframe id="mainIframe" src="pages/index/index.html" frameborder="0"></iframe>
+    </div>
+
+    <script src="_libs/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="_libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="_libs/plugins/layer/layer.js"></script>
+    <script>
+        function changeFrameHeight(){
+            var ifm= document.getElementById("mainIframe"); 
+            ifm.height=document.documentElement.clientHeight-160;
+        }
+        window.onresize=function(){  
+            changeFrameHeight();  
+        }
+        $(function(){
+            changeFrameHeight()
+        })
+    </script>
+</body>
+
+</html>

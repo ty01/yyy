@@ -1,0 +1,133 @@
+.main{
+	width: 1200px;
+	margin: 20px auto 30px;
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px #ddd;
+}
+.moudle{
+	padding:30px 30px 25px; 
+}
+
+.moudle .moudle_title{
+	padding-left: 20px;
+	font-size: 20px;
+	color: #444;
+	font-weight: 777;
+	margin-bottom: 20px;
+}
+
+.info_box .info_item{
+	display: inline-block;
+	width: 337px;
+	border:1px solid #fff; 
+	border-radius: 16px;
+	box-shadow: 0px 0px 20px #eee ;
+	position: relative;	
+	padding:0 40px 0; 
+	margin: 20px;
+	height: 360px;
+	vertical-align: top;
+}
+.info_item.company .item_title{
+	background: #8cc2fb;
+	box-shadow: 0 0 500px #8cc2fb;
+}
+.info_item.metting .item_title{
+	background: #fbb789;
+	box-shadow: 0 0 500px #fbb789;
+}
+.info_item.baseStation .item_title{
+	background: #ff4669;
+	box-shadow: 0 0 500px #ff4669;
+}
+.info_box .info_item .item_title{
+    text-align: center;
+    color: #FFF;
+    font-size: 20px;
+    line-height: 40px;
+    margin: -20px auto;
+    width: 150px; 
+    border-radius: 20px;
+}
+.info_box .info_item .item_img{
+	width: 105px;
+	height: 105px;
+	margin: 50px auto 0;
+	text-align: center;
+	background: #535353;
+	vertical-align: middle;
+	position: relative;
+}
+.info_box .info_item .item_img img{
+	width: 50px;
+	height: 60px;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.info_box .info_item .item_name{
+	text-align: center;
+	font-size: 16px;
+	color: #444;
+	margin:25px 0 30px ;
+}
+.info_box .info_item .border{
+	width: 200px;
+	margin: 0 auto 35px; 
+	border:1px solid #f5f5f5;
+}
+.info_box .info_item p.statistics{
+	text-align: right;
+	font-size: 16px;
+	color: #666; 
+	position: relative;
+}
+.info_box .info_item p.statistics .statistics_name{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.info_box .info_item p.statistics .statistics_value{
+	font-size: 20px;
+	color: #444;
+	font-weight: 700; 
+}
+.enter{
+	margin: 0 20px;
+}
+.enter li{
+	display: inline-block;
+	margin:0 50px 30px; 
+	width: 260px;
+	height: 90px;
+	border-radius:3px;
+	border:1px solid #ddd; 
+	/* text-align: center; */
+	vertical-align: middle;
+	line-height: 90px;  
+}
+.enter li img{
+	width: 70px;
+	height: 50px;
+	padding-left: 20px;
+}
+.enter li a{
+	padding-left: 45px;
+	font-size: 20px;
+	color: #444;
+}
+.noelo{
+	text-align: right;
+	padding-right: 30px;
+	padding-bottom: 30px;
+	font-size: 14px;
+	color: #999;
+}
+main>.border{
+	height: 1px;
+	width: 1150px;
+	margin:0 auto;
+	background: #ddd;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  	<meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>升级浏览器</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+	<style type="text/css">
+		* {margin: 0; padding: 0;}
+		ol,ul,li {list-style: none;}
+		.wrapper {
+			width: 940px;
+			margin: 0 auto;
+		}
+		.row {
+			overflow: hidden;
+		}
+		.swith-guide {
+			margin-left: 30px;
+		}
+		.col-md-2 {
+			float: left;
+			padding: 0;
+			width: 16.6666667%;
+		}
+		.browser {
+			text-align: center;
+		}
+		.browser .browser-logo img{
+			width: 48px;
+			height: 48px;
+		}
+		.browser h3 {
+			font-size: 18px;
+			font-weight: normal;
+			line-height: 22px;
+			margin-top: 10px;
+		}
+		.row {
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+    <div class="wrapper container">
+	    <div class="alert alert-warning" role="alert">
+	      <strong>敬告：</strong> 您的IE浏览器版本过于古老，为了保证您的浏览器体验，请您升级到IE9以上或安装其他内核的现代浏览器或双核浏览器！<a href="http://baoku.360.cn/soft/list/cid/157?cid=157" target="_blank">立即下载</a>
+	    </div>
+
+	    <div class="panel panel-success">
+	      <div class="panel-heading">
+	        <h3 class="panel-title">支持的浏览器 <code>注：Windows XP不支持IE9以上，360请使用极速模式，强烈推荐Chrome</code></h3>
+	      </div>
+	      <div class="panel-body">
+	         <div class="row">
+	         	  <div class="col-md-2">
+	         	    <div class="browser">
+						<div class="browser-logo"><img src="img/browsers/chrome.png"></div>
+						<h3>Chrome<br />谷歌浏览器</h3>
+						<a class="btn btn-primary btn-sm" href="http://www.google.cn/intl/zh-CN/chrome/browser/desktop/index.html" target="_blank">立即下载</a>
+					</div>
+	         	  </div>
+				  <div class="col-md-2">
+				     <div class="browser">
+						<div class="browser-logo"><img src="img/browsers/360-chrome.png"></div>
+						<h3>360<br />极速浏览器</h3>
+						<a class="btn btn-primary btn-sm" href="http://chrome.360.cn/" target="_blank">立即下载</a>
+				  	</div>
+	         	  </div>
+				  <div class="col-md-2">
+				     <div class="browser">
+						<div class="browser-logo"><img src="img/browsers/360-se.png"></div>
+						<h3>360<br />安全浏览器</h3>
+						<a class="btn btn-primary btn-sm" href="http://se.360.cn/" target="_blank">立即下载</a>
+				  	</div>
+	         	  </div>
+				  <div class="col-md-2">
+				     <div class="browser">
+						<div class="browser-logo"><img src="img/browsers/firefox.png"></div>
+						<h3>Firefox<br />火狐浏览器</h3>
+						<a class="btn btn-primary btn-sm" href="http://www.firefox.com.cn/download/" target="_blank">立即下载</a>
+				  	</div>
+	         	  </div>
+				  <div class="col-md-2">
+				     <div class="browser">
+						<div class="browser-logo"><img src="img/browsers/safari.png"></div>
+						<h3>Safari<br />苹果浏览器</h3>
+						<a class="btn btn-primary btn-sm" href="http://www.apple.com/cn/safari/" target="_blank">立即下载</a>
+				  	</div>
+	         	  </div>
+				  <div class="col-md-2">
+				     <div class="browser">
+						<div class="browser-logo"><img src="img/browsers/ie.png"></div>
+						<h3>IE9<br />及以上版本</h3>
+						<a class="btn btn-primary btn-sm" href="https://www.microsoft.com/zh-cn/download/internet-explorer-9-details.aspx" target="_blank">立即下载</a>
+					 </div>
+				  </div>
+	         </div>
+
+	         <div class="row">
+	         	<div class="col-md-12">
+	         	 <div class="swith-guide">
+				    <h4>注：360极速模式切换</h4>
+				    <p>360极速浏览器与360安全浏览器都有极速模式与IE兼容模式，请务必切换到极速模式访问</p>
+				    <ul>
+				      <li>1、点击地址栏最后的浏览器图标</li>
+				      <li>2、选择”极速模式“</li>
+				    </ul>
+				    <div class="row">
+				    	<div class="col-md-5">360安全浏览器 <img src="img/browsers/360_switch.png"></div>
+				    	<div class="col-md-5">360极速浏览器 <img src="img/browsers/360_switch2.png"></div>
+				    </div>
+				 </div>
+				</div>
+	         </div>
+	      </div>
+	    </div>
+    </div>
+    <div id="test"></div>
+</body>
+<script type="text/javascript">
+    var refer = decodeURIComponent(location.search.split('refer=')[1] || "");
+    if(refer&&refer.length){
+		if((document.documentMode&&document.documentMode>8) || (!document.documentMode&&window.localStorage) ){
+			document.getElementById('goback').innerHTML = '<a class="btn btn-sm btn-success" href="'+refer+'"><i class="glyphicon glyphicon-ok"></i> 已切换到极速模式，返回继续访问</a>';
+			
+		}
+	}
+</script>
+</html>
