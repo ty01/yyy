@@ -24,6 +24,15 @@ input{background: none;padding-left: 42px;}
 ::-webkit-scrollbar-thumb:vertical:hover{background-color:rgba(0,0,0,.35)}
 ::-webkit-scrollbar-thumb:vertical:active{background-color:rgba(0,0,0,.38)}
 
+
+.main{
+	width: 1200px;
+	margin: 20px auto 30px;
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px #ddd;
+}
+
 .box{
 	/*width: 1200px;*/
 	/*height:800px;*/
@@ -107,17 +116,18 @@ input{background: none;padding-left: 42px;}
 header{
 	width: 1200px;
 	margin:0 auto;
-	height: 150px;
+	height: 100px;
 	position: relative;
 	background: #fff;
-	line-height: 150px;
+	line-height: 100px;
 	vertical-align: middle;
-	font-size: 20px;
+	font-size: 18px;
 	color:#444;
 
 }
 header img{
 	margin-right: 5px;
+	width: 28px;
 }
 header .company{
 	position: absolute;
@@ -131,14 +141,17 @@ header .adress{
 	text-overflow:ellipsis;
 	white-space: nowrap;
 }
+header .adress img{
+	width: 20px;
+}
 header .user{
 	position: absolute;
 	right: 0;
 	top: 0;
 }
 header .user img{
-	width: 70px;
-	height: 70px;
+	width: 50px;
+	height: 50px;
 }
 header #username{
 	display: inline-block;

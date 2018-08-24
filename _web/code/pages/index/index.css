@@ -1,10 +1,4 @@
-.main{
-	width: 1200px;
-	margin: 20px auto 30px;
-	background: #fff;
-	border-radius: 5px;
-	box-shadow: 0px 0px 5px #ddd;
-}
+
 .moudle{
 	padding:30px 30px 25px; 
 }
@@ -44,15 +38,15 @@
 .info_box .info_item .item_title{
     text-align: center;
     color: #FFF;
-    font-size: 20px;
-    line-height: 40px;
+    font-size: 18px;
+    line-height: 38px;
     margin: -20px auto;
-    width: 150px; 
+    width: 140px;
     border-radius: 20px;
 }
 .info_box .info_item .item_img{
-	width: 105px;
-	height: 105px;
+	width: 98px;
+	height: 98px;
 	margin: 50px auto 0;
 	text-align: center;
 	background: #535353;
@@ -60,8 +54,8 @@
 	position: relative;
 }
 .info_box .info_item .item_img img{
-	width: 50px;
-	height: 60px;
+	width: 46px;
+	height: 50px;
 	position: absolute;
     top: 50%;
     left: 50%;
@@ -99,7 +93,7 @@
 }
 .enter li{
 	display: inline-block;
-	margin:0 50px 30px; 
+	margin:0 50px 20px; 
 	width: 260px;
 	height: 90px;
 	border-radius:3px;
@@ -115,7 +109,7 @@
 }
 .enter li a{
 	padding-left: 45px;
-	font-size: 20px;
+	font-size: 18px;
 	color: #444;
 }
 .noelo{
