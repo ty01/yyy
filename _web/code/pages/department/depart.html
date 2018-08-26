@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+        部门管理
+    </title>
+    <link rel="stylesheet" href="../../_libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../_libs/dist/css/sdm.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="depart.css">
+    <!--[if lt IE 9]>
+    <script src="../_libs/plugins/html5shiv.min.js"></script>
+    <script src="../_libs/plugins/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+
+<body >
+    
+    <div class="main">
+       <div id="tree">
+           
+       </div>
+    </div>
+    <script src="../../_libs/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="../../_libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../_libs/plugins/layer/layer.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+        var data=[{
+            id:"11",
+            name:"江苏苏迪科技有限公司",
+            total:100,
+            children:[{
+                id:"112",
+                name:"研发部",
+                total:40,
+                children:[
+                    {
+                        id:"115",
+                        name:"设计部",
+                        total:20,
+                        children:[
+                        {
+                            id:"117",
+                            name:"设计部",
+                            total:20,
+                            children:false
+                        },{
+                            id:"118",
+                            name:"研发部",
+                            total:20,
+                            children:false
+                        }
+                    ]
+                    },{
+                        id:"116",
+                        name:"研发部",
+                        total:20,
+                        children:[
+                        {
+                            id:"119",
+                            name:"设计部",
+                            total:20,
+                            children:false
+                        },{
+                            id:"120",
+                            name:"研发部",
+                            total:20,
+                            children:false
+                        }
+                    ]
+                    }
+                ]
+            },{
+                id:"113",
+                name:"销售部",
+                total:40,
+                children:false
+            },{
+                id:"114",
+                name:"人事部",
+                total:20,
+                children:false
+            }]
+        }]
+
+        
+        new Tree({
+            data:data,//数据源
+            dom:"#tree",//dom对象
+            chected:"120",//默认选中的元素的id
+            checkedfirst:true,//是否默认选中第一个  与上一个配置互斥
+            callback:function(id){//每一行点击的回调函数  id为每行id
+                console.log(id)
+            }
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>

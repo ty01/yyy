@@ -164,3 +164,29 @@ header #username{
 .iframe_content iframe{
 	width: 100%;
 }
+
+
+
+
+.tree li{
+	padding-left: 20px;
+}
+.tree li.closed ul{
+	display:none;
+}
+
+
+.tree li.haschild{
+	background: url(../images/open.png) no-repeat;
+	background-position-y: 3px;
+}
+
+.tree li.haschild.closed{
+	background-image: url(../images/closed.png);
+}
+.tree .tree_name{
+	padding-left: 20px;
+	background: url(../images/project.png) no-repeat;
+	background-position-y: 3px;
+	cursor: pointer;
+}
