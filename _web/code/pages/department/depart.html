@@ -7,6 +7,9 @@
         部门管理
     </title>
     <link rel="stylesheet" href="../../_libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../_libs/plugins/datatables/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="../../_libs/plugins/iCheck/all.css">
+    <link rel="stylesheet" href="../../_libs/plugins/layer/theme/default/layer.css">
     <link rel="stylesheet" href="../../_libs/dist/css/sdm.css">
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="depart.css">
@@ -20,15 +23,61 @@
 <body >
     
     <div class="main">
-       <div id="tree">
-           
+       <div class="main_left">
+            <h3 class="moudle_title">部门管理</h3>
+            <div class="search_box">
+                <input type="text" placeholder="关键词查询">
+            </div>
+            <div class="border"></div>
+            <div id="tree"></div>
+       </div>
+       <div class="main_right">
+            <div class="departement">
+                <p class="coompany">江苏范僧科技有限公司- <span>研发部（40人）</span></p>
+                <div class="buttonarea"><a class="bt addpeople">添加员工</a><a class="bt">添加部门</a></div>
+            </div>
+            <div class="list childdepart">
+                <h4 class="list_title">下级部门</h4>
+                <div class="partlist active">
+                    <span class="bumname">设计部门</span>
+                    <span class="peocount">10人</span>
+                </div>
+                <div class="partlist">
+                    <span class="bumname">设计部门</span>
+                    <span class="peocount">10人</span>
+                </div>
+            </div>
+            <div class="list departpeople">
+                <h4 class="list_title">部门人员</h4>
+                <div class="buttonarea"><a class="bt">调整部门</a><a class="bt">删除</a></div>
+                <div class="tablebox">
+                    <table id="table" class="table">
+                        <thead>
+                            <tr>
+                                <th width="30"><input type="checkbox" class="all-check check" value="-1" ></th>
+                                <!-- <th width="30">序号</th> -->
+                                <th>姓名</th>
+                                <th>邮箱</th>
+                                <th>职位</th>
+                                <th>手机号</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
        </div>
     </div>
     <script src="../../_libs/plugins/jQuery/jQuery-2.1.4.min.js"></script>
     <script src="../../_libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../_libs/plugins/datatables/jquery.dataTables.js"></script>
+    <script src="../../_libs/plugins/datatables/dataTables.bootstrap.js"></script>
+    <script src="../../_libs/plugins/iCheck/icheck.js"></script>
     <script src="../../_libs/plugins/layer/layer.js"></script>
+    <script src="../../_libs/plugins/sui/sui.js"></script>
     <script src="../../js/common.js"></script>
     <script>
+        var table='';
         var data=[{
             id:"11",
             name:"江苏苏迪科技有限公司",
@@ -87,20 +136,71 @@
             }]
         }]
 
+        function bindevent(){
+            $(document).on("click",".addpeople",function(){
+                var height=getheight()+"px"
+                U.getleftLayer({
+                    title:"新增员工",
+                    content:"peopleinfo.html",
+                    area:["455px",height]
+                })
+            })
+        }
         
-        new Tree({
-            data:data,//数据源
-            dom:"#tree",//dom对象
-            chected:"120",//默认选中的元素的id
-            checkedfirst:true,//是否默认选中第一个  与上一个配置互斥
-            callback:function(id){//每一行点击的回调函数  id为每行id
-                console.log(id)
-            }
-        })
+        function getheight(){
+            return $(".main").height()
+        }
 
 
+        function loadtable(){
+            table=U.creatTable('#table', {
+                "sAjaxSource": "../../json/people.json",
+                "param": getparams,
+                "sAjaxDataProp": "data", // 接口返回的数据索引 如responseData.rows
+                "aoColumns": [ // 列设置, mData值对应接口返回的数据对象的key， mRender为渲染过滤方法，sClass 设置列样式
+                    {
+                        "mRender": function (value, type, row, full) {
+                            return '<input class="" type="checkbox" value="' + row.id + '" />';
+                        },
+                        "bSortable": false,
+                        "sClass": "text-left"
+                    },
+                    { "mData": "name", "bSortable": false, "sClass": "text-left" },
+                    { "mData": "email", "bSortable": false, "sClass": "text-left" },
+                    { "mData": "job", "bSortable": false, "sClass": "text-left" },
+                    { "mData": "phone", "bSortable": false, "sClass": "text-left" },
+                    { 
+                        "bSortable": false, 
+                        "sClass": "text-left",
+                        "mRender":function(){
+                            return '<a>编辑</a>'
+                        }
+                     }
+                   
 
 
+                ]
+            })
+        }
+
+        function getparams(){
+            return{}
+        }
+
+        function run(){
+            bindevent()
+            loadtable()
+            new Tree({
+                data:data,//数据源
+                dom:"#tree",//dom对象
+                chected:"120",//默认选中的元素的id
+                checkedfirst:true,//是否默认选中第一个  与上一个配置互斥
+                callback:function(id){//每一行点击的回调函数  id为每行id
+                    console.log(id)
+                }
+            })
+        }
+        run()
     </script>
 </body>
 

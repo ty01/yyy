@@ -42,7 +42,7 @@
     <script>
         function changeFrameHeight(){
             var ifm= document.getElementById("mainIframe"); 
-            ifm.height=document.documentElement.clientHeight-160;
+            ifm.height=$(document).height()-105;
         }
         window.onresize=function(){  
             changeFrameHeight();  

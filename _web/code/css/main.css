@@ -24,13 +24,17 @@ input{background: none;padding-left: 42px;}
 ::-webkit-scrollbar-thumb:vertical:hover{background-color:rgba(0,0,0,.35)}
 ::-webkit-scrollbar-thumb:vertical:active{background-color:rgba(0,0,0,.38)}
 
-
+a{
+	color: #00a0e9;
+}
 .main{
 	width: 1200px;
 	margin: 20px auto 30px;
 	background: #fff;
 	border-radius: 5px;
 	box-shadow: 0px 0px 5px #ddd;
+	border:1px solid #c7c7c7; 
+	overflow: hidden;
 }
 
 .box{
@@ -169,6 +173,7 @@ header #username{
 
 
 .tree li{
+	line-height: 40px;
 	padding-left: 20px;
 }
 .tree li.closed ul{
@@ -178,15 +183,38 @@ header #username{
 
 .tree li.haschild{
 	background: url(../images/open.png) no-repeat;
-	background-position-y: 3px;
+	background-position-y: 15px;
 }
 
 .tree li.haschild.closed{
 	background-image: url(../images/closed.png);
 }
 .tree .tree_name{
-	padding-left: 20px;
+	padding-left: 25px;
 	background: url(../images/project.png) no-repeat;
+	background-size: 20px 20px; 
 	background-position-y: 3px;
 	cursor: pointer;
+	font-size: 16px;
+	color: #444;
+}
+.tree li span{
+	color: #444;
+}
+.tree li.checked>span{
+	color: #00a0e9;
+}
+
+
+.form-control{
+	height: 40px;
+}
+.form-table .form-tr .form-td{
+	background-color: #fff;
+}
+.form-table .form-item .item-value{
+	border:none; 
+}
+.form-table .form-tr{
+	border:none;
 }

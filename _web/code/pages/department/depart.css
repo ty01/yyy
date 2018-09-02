@@ -1,0 +1,155 @@
+body{
+	background: #f5f5f5;
+}
+.main{
+	position: relative;
+	background: #fff;
+}
+.main_right{
+	margin-left: 330px;
+}
+.main_left{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 870px;
+	bottom: 0;
+	margin: auto;
+	background: #f7f7f7;
+	padding:20px 16px; 
+	border-right: 1px solid #c7c7c7;
+}
+.moudle_title{
+	font-size: 20px;
+	color: #00a0e9;
+	padding-left: 10px;
+
+}
+.search_box{
+	margin-top: 30px;
+	border:1px solid #c7c7c7;
+	border-radius: 5px;
+	background-color: #fff;
+
+}
+.search_box input{
+	width: 100%;
+	font-size: 16px;
+	line-height: 50px;
+	padding-left: 60px;
+	background-image: url(../../images/search.png);
+	background-repeat: no-repeat;
+	background-position: 20px center;
+} 
+.main_left .border{
+	height: 1px;
+	background: 1px #eee;
+	margin-top: 25px;
+	margin-bottom: 15px;
+}
+
+.main_right{
+	padding:75px 30px 0;
+}
+.main_right .departement{
+	position: relative;
+	font-size: 20px;
+	color: #444;
+	line-height: 30px;
+}
+.main_right .departement span{
+	display: inline-block;
+	line-height: 30px;
+	color: #fff;
+	background: #f39b77;
+	padding: 0 5px;
+	border-radius: 5px;
+}
+.buttonarea{
+	font-size: 16px;
+}
+.buttonarea a{
+	display: inline-block;
+	padding: 0px 10px;
+	border:1px solid #b8bebe;
+	border-radius: 4px; 
+	margin-right: 10px;
+	background-color: #fff;
+}
+.departement .buttonarea{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.list.childdepart{
+	margin-top: 30px;
+}
+.list .list_title{
+	font-size: 20px;
+    color: #444;
+
+    padding-left: 40px;
+    background-image: url(../../images/bumen.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px; 
+}
+.list.departpeople .list_title{
+	background-image: url(../../images/renyuan.png);
+}
+.partlist{
+	display: inline-block;
+	width: 200px;
+	height: 70px;
+	line-height: 56px;
+	padding:7px 0;
+	background-color: #c5c6c8;
+	color: #fff;
+	font-size: 20px;
+	margin-right: 15px;
+	border-radius: 6px;
+	text-align: center;
+	margin-top: 20px;
+}
+.partlist.active{
+	background-color: #00a0e9;
+}
+.partlist .bumname{
+	display: inline-block;
+	border-right:1px solid #fff; 
+	width: 62%;
+}
+.partlist .peocount{
+	display: inline-block;
+	width: 32%;
+}
+.list.departpeople{
+	margin-top: 60px;
+}
+.departpeople .buttonarea{
+	margin:30px -32px 0;
+	background-color: #eee; 
+	padding: 7px 0 7px 32px;
+	height:50px;
+	line-height: 34px;
+
+}
+.tablebox{
+	min-height: 300px;
+	margin:0 -5px;
+	padding-bottom: 50px;
+}
+.tablebox .row:last-of-type{
+	padding-top: 10px;
+}
+div.dataTables_info {
+    padding-top: 8px;
+    white-space: nowrap;
+} 
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    z-index: 2;
+    color: #fff;
+    cursor: default;
+    background-color: #00a0e9;
+    border-color: #00a0e9;
+}   

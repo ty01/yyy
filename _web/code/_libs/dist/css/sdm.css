@@ -5063,16 +5063,15 @@ sui
 
 @media (max-width: 767px){
   .form-table .form-tr { border: none;}
-  .form-table .form-td { border-top: 1px solid #f4f4f4; }
 }
 
 @media (max-width: 479px){
   .form-table .form-tr { border: none;}
   .form-table .sui-component:before {display: none;}
   .form-table .form-item { padding-left: 0;}
-  .form-table .form-item .item-name { width: auto; position: static; text-align: left; line-height: 18px;  height: auto!important; line-height: 18px!important;}
+  .form-table .form-item .item-name { width: 80px;}
   .form-table .form-item .item-value {border-top: 1px solid #f4f4f4;}
-  .form-table .form-item .item-name, .form-table .form-item .item-value {padding: 7px 10px;}
+  .form-table .form-item .item-value {padding-left: 90px;}
   .form-table .form-item .radio-group label,.form-table .form-item .checkbox-group label  { display: block;}
 }
 @media (max-width: 359px){
