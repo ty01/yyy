@@ -34,7 +34,7 @@
        <div class="main_right">
             <div class="departement">
                 <p class="coompany">江苏范僧科技有限公司- <span>研发部（40人）</span></p>
-                <div class="buttonarea"><a class="bt addpeople">添加员工</a><a class="bt">添加部门</a></div>
+                <div class="buttonarea"><a class="bt addpeople">添加员工</a><a class="bt adddepart">添加部门</a></div>
             </div>
             <div class="list childdepart">
                 <h4 class="list_title">下级部门</h4>
@@ -49,7 +49,7 @@
             </div>
             <div class="list departpeople">
                 <h4 class="list_title">部门人员</h4>
-                <div class="buttonarea"><a class="bt">调整部门</a><a class="bt">删除</a></div>
+                <div class="buttonarea"><a class="bt editdepart">调整部门</a><a class="bt delete">删除</a></div>
                 <div class="tablebox">
                     <table id="table" class="table">
                         <thead>
@@ -139,16 +139,76 @@
         function bindevent(){
             $(document).on("click",".addpeople",function(){
                 var height=getheight()+"px"
-                U.getleftLayer({
-                    title:"新增员工",
+                U.getLayer({
+                    title:"添加员工",
+                    offset:"rt",
                     content:"peopleinfo.html",
                     area:["455px",height]
                 })
             })
+
+            $(document).on("click",".editpeople",function(){
+                var height=getheight()+"px"
+                U.getLayer({
+                    title:"编辑",
+                    offset:"rt",
+                    content:"peopleinfo.html",
+                    area:["455px",height]
+                })
+            })
+
+            $(document).on("click",".adddepart",function(){
+                var height=getheight()+"px"
+                U.getLayer({
+                    title:"新增部门",
+                    offset:"rt",
+                    content:"departinfo.html",
+                    area:["455px",height]
+                })
+            })
+
+            $(document).on("click",".editdepart",function(){
+                var height=getheight()+"px"
+                U.getLayer({
+                    title:"调整部门",
+                    offset:"rt",
+                    content:"departinfo.html",
+                    area:["455px",height]
+                })
+            })
+
+            $(document).on("click",".bt.delete",function(){
+                var ids=U.getSelectdId(1)
+                var length=$.parseJSON(ids).length
+                console.log(length)
+                if(ids){
+                    U.getLayer({
+                        type:1,
+                        title:"删除",
+                        offset:"auto",
+                        offset:"50px",
+                        content:'<div class="delete"><img src="../../images/delete.png" alt=""><p>确定要删除共'+ length +'项内容吗？</p><div class="buttonarea"><a class="bt bt_success">确定</a><a class="bt cancel">取消</a></div></div>',
+                        area:["460px","405px"],
+                    })
+                }
+            })
+
+            $(document).on("click",".delete .bt_success",function(){
+
+                layer.closeAll()
+            })
+            
+            $(document).on("click",".delete .cancel",function(){
+
+                layer.closeAll()
+            })
+            
+
+            
         }
         
         function getheight(){
-            return $(".main").height()
+            return document.documentElement.clientHeight
         }
 
 
@@ -173,12 +233,9 @@
                         "bSortable": false, 
                         "sClass": "text-left",
                         "mRender":function(){
-                            return '<a>编辑</a>'
+                            return '<a class="editpeople btn btn-edit btn-sm">编辑</a>'
                         }
-                     }
-                   
-
-
+                    }
                 ]
             })
         }

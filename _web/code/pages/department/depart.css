@@ -103,7 +103,8 @@ body{
 	height: 70px;
 	line-height: 56px;
 	padding:7px 0;
-	background-color: #c5c6c8;
+	background: url(../../images/bg_pry.png) no-repeat;
+	background-size: 100% 100%;
 	color: #fff;
 	font-size: 20px;
 	margin-right: 15px;
@@ -112,7 +113,8 @@ body{
 	margin-top: 20px;
 }
 .partlist.active{
-	background-color: #00a0e9;
+	background: url(../../images/bg_active.png) no-repeat;
+	background-size: 100% 100%;
 }
 .partlist .bumname{
 	display: inline-block;
@@ -130,10 +132,14 @@ body{
 	margin:30px -32px 0;
 	background-color: #eee; 
 	padding: 7px 0 7px 32px;
-	height:50px;
-	line-height: 34px;
+	height:40px;
+	line-height: 15px;
 
 }
+.departpeople .buttonarea .bt{
+	color: #444;
+	padding: 5px 15px;
+}	
 .tablebox{
 	min-height: 300px;
 	margin:0 -5px;
@@ -153,3 +159,58 @@ div.dataTables_info {
     background-color: #00a0e9;
     border-color: #00a0e9;
 }   
+.layerbutton{
+	position: absolute;
+	bottom: 80px;
+	left: 50px;
+}
+.layerbutton a{
+	margin-right:10px; 
+}
+.main-content{
+	padding:50px 40px; 
+}
+.btn-edit{
+	background-color: #fff;
+	color: #00a0e9;
+	border-color: #c7c7c7;
+	line-height: 1.0;
+}
+
+.choose{
+	vertical-align: top;
+	overflow:hidden; 
+	padding:15px 18px; 
+	width: 100%;
+	height: 400px;
+}
+.choose .choose_left,.choose .choose_right{
+	float: left;
+	width:326px; 
+	height: 360px;
+}
+.choose .choose_left{
+	margin-right: 20px;
+}
+.choose .choose_title{
+	font-size: 20px;
+	color: #444;
+	line-height: 60px;
+}
+.choose .back{
+	background-color: #eee;
+	border-radius: 10px;
+	height: 300px;
+	padding:15px; 
+}
+.choose .search_box{
+	margin-top: 0;
+}
+.choose #tree{
+	max-height: 200px;
+	overflow-y: auto;
+}
+.choose~.layerbutton{
+	bottom: 50px;
+	left: 20px;
+}

@@ -203,16 +203,16 @@ var totalSize = 0;
             }
             return null;
         },
-        getleftLayer: function (options) {      //layer方法  弹出ifram
+        getLayer: function (options) {      //layer方法  弹出ifram
             var settings = {
                 type: 2,
                 title: '标题',
                 shadeClose: true,
-                scrollbar:true,
+                scrollbar:false,
                 shade: 0.4,
                 area: ['800px', '600px'],
                 move:false,
-                offset:"rt"
+                
             };
             var opt = $.extend(true, settings, options);
             layer.open(opt)
@@ -225,12 +225,12 @@ var totalSize = 0;
                 }
             });
             if(arr.length == 0) {
-                layer.alert("请选择一条信息");
+                layer.alert("请选择一条数据");
                 return false;
             }
             if(type == 2){
                 if(arr.length>=2){
-                    layer.alert('该操作只能选择一条信息，请重新选择！')
+                    layer.alert('该操作只能选择一条数据，请重新选择！')
                     return false;
                 }
                 return arr[0];
@@ -239,7 +239,14 @@ var totalSize = 0;
                 return JSON.stringify(arr);
             }
         },
-       
+        choosedepart:function(){
+            var domm=parent.U.getLayer({
+                title:"选择部门",
+                content:"choosedepart.html",
+                area:["710px","540px"]
+            })
+            return domm
+        }
 	}
 	window.Tree=Tree;
 	window.U = commom;

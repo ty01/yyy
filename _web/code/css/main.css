@@ -218,3 +218,56 @@ header #username{
 .form-table .form-tr{
 	border:none;
 }
+.form-table .form-item .item-name{
+	text-align: left;
+}
+.layui-layer .layui-layer-title{
+	padding:0;
+	font-size: 20px;
+	text-align: center;
+	height: 60px; 
+	line-height: 60px;  
+}
+.layui-layer .layui-layer-setwin{
+	top: 25px;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary.hover{
+	background-color: #00a0e9;
+}
+.btn-primary{
+	background-color: #00a0e9;
+}
+
+.delete img{
+	display: block;
+	text-align: center;
+	margin: 55px auto 35px;
+}
+.delete p{
+	font-size: 20px;
+	color: #444;
+	text-align: center;
+}
+.delete .buttonarea {
+	text-align: center;
+	margin-top: 60px;
+}
+.delete .buttonarea .bt{
+	line-height: 30px;
+	color: #444;
+	font-size: 16px;
+	background-color: #eee;
+	padding: 2px 15px;
+}
+.delete .buttonarea .bt_success{
+	background-color: #00a0e9;
+	color: #fff;
+}
+
+.chooseselect{
+	height: 40px;
+	border-radius: 5px;
+	border: 1px solid #d2d6de;
+	background: url('../images/open.png') no-repeat;
+	background-position: 240px center; 
+}
